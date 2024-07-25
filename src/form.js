@@ -1,4 +1,5 @@
 import fetchData from "./fetchData";
+import display from "./display";
 
 const form = document.querySelector("#location-form");
 const search = document.querySelector("#searchbar");
@@ -13,6 +14,9 @@ function setUpForm() {
       console.log("all data: ", data);
       const myData = fetchData.processData(data);
       console.log("myData: ", myData);
+
+      // display.renderAddress(myData.resolvedAddress);
+      display.renderData(myData);
     });
   });
 }

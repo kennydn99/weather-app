@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px;
+  background-color: rgb(245, 206, 212);
+}
+
+header {
+  display: flex;
+  background-color: aliceblue;
+  padding: 20px 40px;
+  align-items: center;
+  justify-content: center;
+  gap: 5pc;
+}
+.current-weather {
+  border: 1px green solid;
+}
+.forecast {
+  border: 1px yellow solid;
+}
