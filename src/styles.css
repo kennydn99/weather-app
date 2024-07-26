@@ -9,44 +9,53 @@ body {
 
 header {
   display: flex;
-  background-color: aliceblue;
-  padding: 20px 40px;
+  padding: 30px 40px;
   align-items: center;
   justify-content: center;
   gap: 5pc;
 }
 
 .content {
-  border: 2px green solid;
+  display: flex;
   height: 100%;
+  flex-direction: column;
 }
 
 .current-weather {
-  background-color: aqua;
   height: 50%;
+  display: flex;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 80%;
+  align-self: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
   position: relative;
 }
 
-.resolvedAddress {
+.current-weather .resolvedAddress {
   position: absolute;
-  right: 0;
+  top: 20px;
+  right: 20px;
 }
 
-.temp {
+.current-weather .temp {
   position: absolute;
-  left: 0;
+  top: 20px;
+  left: 20px;
 }
 
-.conditions {
+.current-weather .conditions {
   position: absolute;
-  bottom: 0;
-  right: 0;
+  bottom: 20px;
+  right: 20px;
 }
 
-.feelslike {
+.current-weather .feelslike {
   position: absolute;
-  bottom: 0;
-  left: 0;
+  bottom: 20px;
+  left: 20px;
 }
 
 .forecast {
@@ -78,7 +87,11 @@ header {
   align-self: center;
 }
 
-.day-temp {
+.day-temp,
+.temp,
+.feelslike,
+.conditions,
+.resolvedAddress {
   font-size: 1.5em;
   font-weight: bold;
   margin: auto 0;

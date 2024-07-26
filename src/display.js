@@ -15,7 +15,7 @@ function renderDays(array) {
       <div class='date'>${date}</div>
       <div class='day-temp'>${temp}°F</div>
       <div class='descrip'>${description}</div>
-      <div class='hi-lo'>H:${hi} L:${lo}</div>
+      <div class='hi-lo'>H:${hi}°F L:${lo}°F</div>
       </div>`;
       forecastDiv.appendChild(dayItem);
     }
@@ -32,7 +32,11 @@ function renderData(myData) {
     if (key === "days") {
       renderDays(value);
     } else {
-      item.innerHTML = `${key}: ${value}`;
+      if (key === "temp" || key === "feelslike") {
+        item.innerHTML = `${key}: ${value}°F`;
+      } else {
+        item.innerHTML = `${value}`;
+      }
       item.classList.add(`${key}`);
     }
     currentWeatherDiv.appendChild(item);
