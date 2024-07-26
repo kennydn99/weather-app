@@ -4,8 +4,6 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 50px;
   background-color: rgb(245, 206, 212);
 }
 
@@ -17,9 +15,76 @@ header {
   justify-content: center;
   gap: 5pc;
 }
-.current-weather {
-  border: 1px green solid;
+
+.content {
+  border: 2px green solid;
+  height: 100%;
 }
+
+.current-weather {
+  background-color: aqua;
+  height: 50%;
+  position: relative;
+}
+
+.resolvedAddress {
+  position: absolute;
+  right: 0;
+}
+
+.temp {
+  position: absolute;
+  left: 0;
+}
+
+.conditions {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.feelslike {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
 .forecast {
-  border: 1px yellow solid;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  gap: 20px;
+  overflow-x: auto; /* Add horizontal scroll if needed */
+  padding: 20px;
+  height: 46%;
+  align-items: center;
+}
+
+.day {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  width: 200px;
+  height: 250px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: #f9f9f9;
+}
+
+.date {
+  align-self: center;
+}
+
+.day-temp {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin: auto 0;
+}
+
+.descrip,
+.hi-lo {
+  align-self: flex-start;
 }

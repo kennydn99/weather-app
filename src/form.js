@@ -3,7 +3,6 @@ import display from "./display";
 
 const form = document.querySelector("#location-form");
 const search = document.querySelector("#searchbar");
-// const searchBtn = document.querySelector("#search-btn");
 
 function setUpForm() {
   form.addEventListener("submit", (e) => {
@@ -15,7 +14,6 @@ function setUpForm() {
       const myData = fetchData.processData(data);
       console.log("myData: ", myData);
 
-      // display.renderAddress(myData.resolvedAddress);
       display.renderData(myData);
     });
   });
