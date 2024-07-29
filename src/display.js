@@ -1,3 +1,5 @@
+import getIcon from "./icons";
+
 function renderDays(array) {
   const forecastDiv = document.querySelector(".forecast");
   forecastDiv.innerHTML = "";
@@ -26,6 +28,11 @@ function renderData(myData) {
   const currentWeatherDiv = document.querySelector(".current-weather");
   currentWeatherDiv.innerHTML = "";
 
+  // image element for icon
+  const icon = document.createElement("img");
+  icon.classList.add("weather-icon");
+  icon.src = getIcon(myData.conditions);
+
   Object.entries(myData).forEach(([key, value]) => {
     const item = document.createElement("div");
 
@@ -41,6 +48,8 @@ function renderData(myData) {
     }
     currentWeatherDiv.appendChild(item);
   });
+
+  currentWeatherDiv.appendChild(icon);
 }
 
 export default { renderData };
