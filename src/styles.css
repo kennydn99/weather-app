@@ -23,7 +23,7 @@ header {
 
 .current-weather {
   height: 50%;
-  display: flex;
+  display: none;
   padding: 20px;
   border: 1px solid #ccc;
   border-radius: 10px;

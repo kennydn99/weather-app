@@ -67,6 +67,7 @@ function renderData(myData, unit) {
   });
 
   currentWeatherDiv.appendChild(icon);
+  currentWeatherDiv.style.display = "flex";
 }
 
 export default { renderData };

@@ -12,7 +12,6 @@ function setUpForm() {
   form.addEventListener("submit", async (e) => {
     e.preventDefault();
     const location = search.value.trim();
-    console.log("User inputed location as: ", location);
 
     // display loading message
     loadingMessage.style.display = "block";
